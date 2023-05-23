@@ -29,15 +29,26 @@ export class QuizzComponent {
  }
 
  playerChoose(value:string){
-  this.answers.push(value)
+  this.answers.push(value) 
+  this.nextStep()
  } 
 
- async nextStep(){
+nextStep(){ 
   this.questionIndex+=1 
   if(this.questionMaxIndex > this.questionIndex){
    this.questionSelected = this.questions[this.questionIndex]
   }else{
    this.finished = true
   }
+ } 
+
+ async checkResult(answers:string[]){
+  const result = answers.reduce((previous,current,i, arr) => {
+    if(arr.filter()){
+
+    }else{
+
+    }
+  })
  }
 }
